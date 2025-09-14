@@ -13,6 +13,19 @@ Example:
     Output: [[7,4,1],[8,5,2],[9,6,3]]
 '''
 def rotate(matrix):
-    # TODO
-    ...
+    n = len(matrix)
     
+    # Transpose the matrix
+    for i in range(n):  # Iterate over the rows
+        for j in range(i, n):  # Iterate over the columns starting from the current row 'i'
+            # Swap the elements at positions (i, j) and (j, i)
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    
+    print(matrix)
+    # Reverse each row
+    for row in matrix:  # Iterate over each row in the matrix
+        row.reverse()  # Reverse the elements in the current row
+    
+    return matrix
+
+print(rotate([[1,2,3],[4,5,6],[7,8,9]]))
