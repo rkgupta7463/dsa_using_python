@@ -11,4 +11,4 @@ Hint: Use two pointers tracking left_max and right_max. Water = min(left_max, ri
 '''
 
 def solution(height:list[int]):
-    return
+    ...
