@@ -20,19 +20,53 @@ class LinkedList:
 
         return result
 
+    def preappend(self,value):
+        new_node=Node(value)
+        if self.head is None:
+            self.head=new_node
+            self.tail=new_node
+        else:
+            new_node.next=self.head
+            self.head=new_node
+        self.lenght+=1
+
     def append(self,value):
         new_node=Node(value=value)
         if self.head is None:
             self.head=new_node
             self.tail=new_node
-
         else:
             self.tail.next=new_node
             self.tail=new_node
         self.lenght+=1
 
+    def insert(self,idx,value):
+        new_node=Node(value)
+        temp_node=self.head
+
+        if self.lenght == 0:
+            self.head=new_node
+            self.tail=new_node
+        elif idx==0:
+            new_node.next=self.head
+            self.head=new_node
+        else:    
+            for _ in range(idx-1):
+                temp_node=temp_node.next
+            new_node.next=temp_node.next
+            temp_node.next=new_node
+
+        self.lenght+=1
+
+
+
+
 new_linked_list=LinkedList()
 new_linked_list.append(10)
 new_linked_list.append(15)
 new_linked_list.append(16)
+print(new_linked_list)    
+new_linked_list.preappend(22)
+print(new_linked_list)    
+new_linked_list.insert(0,25)
 print(new_linked_list)    
