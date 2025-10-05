@@ -43,7 +43,8 @@ class LinkedList:
     def insert(self,idx,value):
         new_node=Node(value)
         temp_node=self.head
-
+        if idx<0 or idx > self.lenght:
+            return False
         if self.lenght == 0:
             self.head=new_node
             self.tail=new_node
@@ -58,6 +59,8 @@ class LinkedList:
 
         self.lenght+=1
 
+        return True
+
 
 
 
@@ -68,5 +71,5 @@ new_linked_list.append(16)
 print(new_linked_list)    
 new_linked_list.preappend(22)
 print(new_linked_list)    
-new_linked_list.insert(0,25)
+new_linked_list.insert(3,25)
 print(new_linked_list)    
