@@ -61,6 +61,12 @@ class LinkedList:
 
         return True
 
+    def traversal(self):
+        current=self.head
+        while current is not None:
+            print(current.value)
+            current=current.next
+
 
 
 
@@ -73,3 +79,4 @@ new_linked_list.preappend(22)
 print(new_linked_list)    
 new_linked_list.insert(3,25)
 print(new_linked_list)    
+new_linked_list.traversal()
