@@ -63,11 +63,18 @@ class LinkedList:
 
     def traversal(self):
         current=self.head
-        
+
         while current is not None:
             print(current.value)
             current=current.next
 
+    def search(self,target):
+        current=self.head
+        while current is not None:
+            if current.value == target:
+                print("targetted value: ",current.value," found!")
+                break
+            current=current.next
 
 
 
@@ -81,3 +88,4 @@ print(new_linked_list)
 new_linked_list.insert(3,25)
 print(new_linked_list)    
 new_linked_list.traversal()
+new_linked_list.search(15)
