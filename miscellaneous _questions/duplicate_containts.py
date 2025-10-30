@@ -37,7 +37,6 @@ Hint: Use sets
 
 def contains_duplicate_last(nums):
     # TODO
-    seen=[]
     for i in range(len(nums)-1):
         if nums[i] == nums[-1]:
             return True

@@ -89,3 +89,16 @@ new_linked_list.insert(3,25)
 print(new_linked_list)    
 new_linked_list.traversal()
 new_linked_list.search(15)
+
+
+
+@api.post("/upload-files/")
+def multiple_file_upload(request, files: List[UploadedFile] = File(None)):
+    uploaded = []
+    for file in files:
+        obj = MyFileModel.objects.create(
+            name=file.name,
+            file=file
+        )
+        uploaded.append(obj.name)
+    return {"uploaded_files": uploaded} 
