@@ -5,12 +5,15 @@ Write a function to find the missing number in a given integer array of 1 to 100
 
 Example
 
-    missing_number([1, 2, 3, 4, 6], 6) # 5
+    missing_number([1, 2, 3, 4, 6,7], 6) # 5
 '''
 def missing_number(arr, n):
     # TODO
-    total_sum=n*(n+1)//2
+    m=n+1
+    total_sum=m*(m+1)//2
+    print("total_sum:- ",total_sum)
     arr_sum=sum(arr)
+    print("arr_sum:- ",arr_sum)
     return total_sum - arr_sum
 
-missing_number([1,2,3,4,6,7],6)
+print(missing_number([1, 2, 3, 4, 6,7],6))
