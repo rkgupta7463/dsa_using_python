@@ -28,4 +28,4 @@ def pair_sum(myList, sum):
                 lst.append(f"{m1}+{m2}")
     return lst
 
-pair_sum([2, 4, 3, 5, 6, -2, 4, 7, 8, 9],7)
+print(pair_sum([2, 4, 3, 5, 6, -2, 4, 7, 8, 9],7))

@@ -11,9 +11,7 @@ def missing_number(arr, n):
     # TODO
     m=n+1
     total_sum=m*(m+1)//2
-    print("total_sum:- ",total_sum)
     arr_sum=sum(arr)
-    print("arr_sum:- ",arr_sum)
     return total_sum - arr_sum
 
 print(missing_number([1, 2, 3,4, 6],5))

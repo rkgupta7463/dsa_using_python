@@ -23,7 +23,7 @@ Eg:- [2,6,3,9,11], output :- [1,2] -> indexes of those value whose sum of pairs 
 ## this function retruns the values of the first paired matched with target 
 def two_pairs_sum_values(arr,target):
     seen=[]
-    for i,n in enumerate(arr):
+    for n in arr:
         sub=target - n
         if sub in seen:
             return [sub,n]

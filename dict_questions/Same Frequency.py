@@ -25,8 +25,8 @@ def check_same_frequency(list1, list2):
 
 
 list1 = [1, 2, 3, 2, 1]
-list2 = [3, 1, 2, 1, 3]
-print(check_same_frequency(list1, list2))
+list2 = [3, 1, 2, 1, 2]
+# print(check_same_frequency(list1, list2))
 
 ### 2nd way with decorator
 def check_same_frequency(list1, list2):
@@ -39,5 +39,5 @@ def check_same_frequency(list1, list2):
     return count_elements(list1) == count_elements(list2)
 
 list1 = [1, 2, 3, 2, 1]
-list2 = [3, 1, 2, 1, 3]
+list2 = [3, 1, 2, 1, 2]
 print(check_same_frequency(list1, list2))
