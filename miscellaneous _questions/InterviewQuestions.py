@@ -18,7 +18,7 @@ def missing_number(arr, n):
     
     return missing
 
-
+print("missing value: ",missing_number([1,2,3,5],5))
 
 
 #  Find Pairs
@@ -48,8 +48,8 @@ def two_sum(nums, target):
         seen[num] = i
 
 # Find a number
-import numpy as np 
-my_array = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+# import numpy as np 
+# my_array = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
 
 def find_number(array, number):
     for i in range(len(array)):
@@ -187,3 +187,79 @@ def rotate(matrix):
     # Reverse each row
     for row in matrix:  # Iterate over each row in the matrix
         row.reverse()  # Reverse the elements in the current row
+
+
+def get_index(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix)):
+            print(f"{matrix[i][j]} value at index {i}{j}")
+
+'''
+[[1,2,3]
+[4,5,6]
+[2,8,9]]
+'''
+
+get_index([[1,2,3],[4,5,6],[7,8,9]])
+
+'''left to right'''
+def daiganal_sumlr(matrix):
+    s=0
+    for i in range(len(matrix)):
+        s+=matrix[i][i]
+    print("sum of daiganal value: ",s)
+
+'''right to left direction'''
+def daiganal_sumrl(matrix):
+    s=0
+    for i in range(len(matrix)):
+        for j in range(len(matrix)):
+            if i+j==2:
+                s+=matrix[i][j]
+    print("sum of daiganal value(RL): ",s)
+
+daiganal_sumrl([[1,2,3],[4,5,2],[2,8,9]])
+
+
+def fav_ser(num):
+    if num<=1:
+        return num
+    return fav_ser(num-1)+fav_ser(num-2)
+
+print("Fav. Series\t",[fav_ser(num=num) for num in range(1,11)])
+
+
+class RemoveDuplicates:
+    def __init__(self, lst):
+        self.lst = lst
+
+    def _flatten(self, lst, result):
+        for item in lst:
+            if isinstance(item, list):
+                self._flatten(item, result)
+            else:
+                result.append(item)
+
+    def flatten(self):
+        result = []
+        self._flatten(self.lst, result)
+        return result
+
+    def unique_list_counter(self):
+        flat_list = self.flatten()
+        unique_list = []
+        counter = {}
+
+        for item in flat_list:
+            if item not in counter:
+                unique_list.append(item)
+                counter[item] = 1
+            else:
+                counter[item] += 1
+
+        return f"unique_list:\t{unique_list}" ,f"counter:\t{counter}" 
+        
+        
+ob=RemoveDuplicates([1,2,[3,4,[4,5]]])
+unique, counter=ob.unique_list_counter()
+print(unique,"\n",counter)

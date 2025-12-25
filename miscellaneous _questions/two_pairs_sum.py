@@ -30,3 +30,23 @@ def two_pairs_sum_values(arr,target):
         seen.append(n)
 
 print(two_pairs_sum_values([4,5,3,9,1],9))
+
+
+s="i love india"
+rs=' '.join(s.split()[::-1])
+print(rs.upper())
+
+class TestCLS:
+    name="Rishu Gupta"
+    @classmethod
+    def demo(cls):
+        return cls.name
+print(TestCLS.demo())
+
+class TestCLS:
+    # name="Rishu Gupta"
+    @staticmethod
+    def demo():
+        return "Rishu"
+    
+print(TestCLS.demo())

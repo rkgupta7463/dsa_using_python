@@ -24,4 +24,4 @@ class Solution:
         return max_area
 
 
-print(Solution().maxArea(height=[1,1]))
+print(Solution().maxArea(height=[1,2,1]))
