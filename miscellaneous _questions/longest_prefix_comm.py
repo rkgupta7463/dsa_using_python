@@ -23,7 +23,7 @@ Explanation: There is no common prefix among the input strings.
 '''
 
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
+    def longestCommonPrefix(self, strs: list[str]) -> str:
         if not strs:
             return ""
         prefix=strs[0]
@@ -33,4 +33,7 @@ class Solution:
                 if prefix=="":
                     return ""
         return prefix
-    
+
+strs =  ["dog","racecar","car"]#["flower","flow","flight"]
+obj=Solution()
+print(obj.longestCommonPrefix(strs=strs))
