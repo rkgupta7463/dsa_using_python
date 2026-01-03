@@ -36,5 +36,20 @@ Explanation: L = 50, V= 5, III = 3.
 '''
 
 class Solution:
-    def rom_to_num(self,str):
-        ...
+    def rom_to_num(self,strs):
+        strs=strs.upper()
+        roman_series={
+        'I': 1, 'V': 5, 'X': 10,
+        'L': 50, 'C': 100,
+        'D': 500, 'M': 1000
+        }
+        res=0
+        for a,b in zip(strs,strs[1:]):
+            if roman_series[a] < roman_series[b]:
+                res-=roman_series[a]
+            else:
+                res+=roman_series[a]
+        return res+roman_series[strs[-1]]
+
+obj=Solution()
+print(obj.rom_to_num('xv'))
