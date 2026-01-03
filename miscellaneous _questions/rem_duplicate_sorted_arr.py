@@ -46,7 +46,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 # solution.1 
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums: list[int]) -> int:
         if not nums:
             return 0
 
