@@ -34,3 +34,7 @@ Explanation: The last word is "joyboy" with length 6.
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         return len(s.strip().split()[-1])
+
+s = "luffy is still joyboy"
+obj=Solution()
+print(obj.lengthOfLastWord(s))
