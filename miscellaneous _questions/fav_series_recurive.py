@@ -16,4 +16,4 @@ def flatten_list(lst):
     return ls
 
 
-flatten_list([1,2,3,[2,4,[5,6]]])
+print(flatten_list([[1],2,3,[2,[4,[5,[6]]]]]))

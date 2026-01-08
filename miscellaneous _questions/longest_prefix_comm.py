@@ -27,13 +27,17 @@ class Solution:
         if not strs:
             return ""
         prefix=strs[0]
+        print("s prefix: ",prefix)
         for s in strs[1:]:
+            print("s: ",s)
             while not s.startswith(prefix):
+                print("prefix: ",prefix)
                 prefix=prefix[:-1]
                 if prefix=="":
                     return ""
         return prefix
 
-strs =  ["dog","racecar","car"]#["flower","flow","flight"]
+strs =  ["dog","racecar","car"]
+strs=["flower","flow","flight"]
 obj=Solution()
 print(obj.longestCommonPrefix(strs=strs))
