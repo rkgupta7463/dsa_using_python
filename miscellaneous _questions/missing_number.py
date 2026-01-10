@@ -14,4 +14,4 @@ def missing_number(arr, n):
     arr_sum=sum(arr)
     return total_sum - arr_sum
 
-print(missing_number([1, 2, 3,4, 6],5))
+print(missing_number([1, 2, 5,4, 6],5))
