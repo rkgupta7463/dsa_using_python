@@ -1,2 +1,1 @@
-j=Solution()
-print(obj.mergeTwo
+-1,-1,-1
