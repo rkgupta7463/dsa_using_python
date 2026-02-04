@@ -40,6 +40,7 @@ Constraints:
     -109 <= nums1[i], nums2[j] <= 109
 '''
 
+## 1st way
 class Solution:
     def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
         """
@@ -58,9 +59,16 @@ class Solution:
         nums1=temp+nums2[j:]
         print(nums1)
 
+## second way
+class Solution:
+    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
+        nums1[m:]=nums2
+        nums1.sort()
+        return nums1
+
 obj=Solution()
-nums1 = [0]
-m = 0
-nums2 = [1]
-n = 1
-obj.merge(nums1=nums1,m=m,nums2=nums2,n=n)
+nums1 = [1,2,3,0,0,0] 
+m = 3 
+nums2 = [2,5,6] 
+n = 3
+print(obj.merge(nums1=nums1,m=m,nums2=nums2,n=n))
